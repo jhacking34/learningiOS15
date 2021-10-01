@@ -11,6 +11,8 @@
 		F63B33482707290F004677AD /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63B33472707290F004677AD /* ContentView.swift */; };
 		F63B334A27072911004677AD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F63B334927072911004677AD /* Assets.xcassets */; };
 		F63B334D27072911004677AD /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F63B334C27072911004677AD /* Preview Assets.xcassets */; };
+		F63B335827072B45004677AD /* Header.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63B335727072B45004677AD /* Header.swift */; };
+		F63B335A27072C81004677AD /* Desc.swift in Sources */ = {isa = PBXBuildFile; fileRef = F63B335927072C81004677AD /* Desc.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		F63B33472707290F004677AD /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F63B334927072911004677AD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F63B334C27072911004677AD /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F63B335727072B45004677AD /* Header.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Header.swift; sourceTree = "<group>"; };
+		F63B335927072C81004677AD /* Desc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Desc.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,9 @@
 		F63B33442707290F004677AD /* learningiOS15 */ = {
 			isa = PBXGroup;
 			children = (
+				F63B335527072B17004677AD /* Model */,
+				F63B335427072B06004677AD /* ViewModel */,
+				F63B335327072A39004677AD /* View */,
 				F63B33452707290F004677AD /* learningiOS15App.swift */,
 				F63B33472707290F004677AD /* ContentView.swift */,
 				F63B334927072911004677AD /* Assets.xcassets */,
@@ -65,6 +72,37 @@
 				F63B334C27072911004677AD /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		F63B335327072A39004677AD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F63B335627072B29004677AD /* Header */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F63B335427072B06004677AD /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F63B335527072B17004677AD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		F63B335627072B29004677AD /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				F63B335727072B45004677AD /* Header.swift */,
+				F63B335927072C81004677AD /* Desc.swift */,
+			);
+			path = Header;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,7 +175,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F63B335A27072C81004677AD /* Desc.swift in Sources */,
 				F63B33482707290F004677AD /* ContentView.swift in Sources */,
+				F63B335827072B45004677AD /* Header.swift in Sources */,
 				F63B33462707290F004677AD /* learningiOS15App.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
