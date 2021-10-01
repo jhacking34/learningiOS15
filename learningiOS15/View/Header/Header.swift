@@ -22,6 +22,7 @@ struct Header: View {
                 .foregroundColor(Color.blue)
             Desc(description: desTxt)
         }
+        .padding(.top, 50)
     }
 }
 
