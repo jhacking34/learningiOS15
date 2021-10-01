@@ -11,4 +11,9 @@ class InspectionVM: ObservableObject {
     @Published  var unitNumber = ""
     @Published  var make = ""
     @Published  var model = ""
+    @Published var items: [Unit] = []
+    
+    func fetch(){
+        items = [Unit(name: "Johnny's Ford", unitNumber: "B-123", make: "Ford", model: "F-150")]
+    }
 }

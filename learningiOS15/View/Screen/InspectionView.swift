@@ -29,6 +29,21 @@ struct InspectionView: View {
                 
             }
             .padding(.horizontal)
+            VStack{
+                List(vm.items, id: \.id){ item in
+                    HStack{
+                        Text(item.make)
+                        Text(item.model)
+                        Text("Unit number : \(item.unitNumber)")
+                        Text("This is the owner of the truck \(item.name)")
+                    }
+                    .foregroundColor(Color.green)
+                }
+                .listStyle(.grouped)
+                .onAppear{
+                    vm.fetch()
+                }
+            }
         }
         
     }
