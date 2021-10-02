@@ -16,14 +16,25 @@ struct InspectionView: View {
             Header(title: "Inspection", subTitle: "Enter Details", desTxt: "This is going to be a form view to replicate the LVF")
             GroupBox(label: Text("Fill in form")) {
                 VStack{
-                    TextField("Name", text: $vm.name)
+                    HStack{
+                        TextField("Name", text: $vm.name)
+                        Text(vm.valName)
+                    }
                     HStack
                     {
                         TextField("Unit #", text: $vm.unitNumber)
                         TextField("Make", text: $vm.make)
                         TextField("Model", text: $vm.model)
                     }
-                    
+                    Button {
+                        vm.addUnit()
+                    } label: {
+                        Image(systemName: "cart.badge.plus")
+                        Text("Search")
+                    }
+                    .font(.title2)
+                    .symbolRenderingMode(.multicolor)
+                    .buttonStyle(.borderedProminent)
                 }
                 .textFieldStyle(.roundedBorder)
                 
