@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import Combine
+
 class InspectionVM: ObservableObject {
     @Published var name = ""
     @Published var valName = ""
@@ -13,11 +15,21 @@ class InspectionVM: ObservableObject {
     @Published var make = ""
     @Published var model = ""
     @Published var items: [Unit] = []
+    @Published var valid : Bool = false
+    var cancellable: AnyCancellable?
     
     init(){
-        $name
+        cancellable = $name
             .map{ $0.isEmpty ? "❌" : "✅"}
-            .assign(to: &$valName)
+            .sink { [unowned self] value in
+                self.valName = value
+                if value == "❌"{
+                    self.valid = true
+                } else {
+                    self.valid = false
+                }
+            }
+        
     }
     
     func fetch(){

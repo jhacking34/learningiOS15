@@ -32,9 +32,11 @@ struct InspectionView: View {
                         Image(systemName: "cart.badge.plus")
                         Text("Search")
                     }
+                    .disabled(vm.valid)
                     .font(.title2)
                     .symbolRenderingMode(.multicolor)
                     .buttonStyle(.borderedProminent)
+                    
                 }
                 .textFieldStyle(.roundedBorder)
                 
